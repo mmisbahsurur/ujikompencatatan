@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('tables');
-})->name('tables');
+Route::get('/', [PengelolaController::class, 'tables'])->name('tables');
 Route::get('/input/{id_skpd}',[PengelolaController::class,'input'])->name('pencatatan.input');
 Route::post('/klik/{id_skpd}', [PengelolaController::class, 'klik'])->name('pencatatan.klik');
 Route::post('/submit', [PengelolaController::class, 'submit'])->name('pencatatan.submit');

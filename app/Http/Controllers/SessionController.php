@@ -27,15 +27,15 @@ class SessionController extends Controller
             'password' =>$request->password
         ];
         if (Auth::attempt($infologin)) {
-            return redirect()->route('dashboard');
+            return redirect('/');
         }
         else{
             return redirect('login');
         }
-        
+
     }
     public function logout(){
         Auth::logout();
-        return redirect()->route('index');
+        return redirect('/login');
     }
 }

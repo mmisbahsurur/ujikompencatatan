@@ -18,7 +18,7 @@ class PengelolaController extends Controller
         //
         $skpd = skpdModel::with('data')->get();
         return view('tables', compact('skpd'));
-        
+
     }
     public function submit(Request $request){
         $validateData =$request->validate([
@@ -28,16 +28,16 @@ class PengelolaController extends Controller
             'nama_skpd' => 'required',
             'alamat_skpd' => 'required',
 
-            
+
         ]);
-        
+
         $skpd = new skpdModel();
         $skpd->nip = $request->nip;
         $skpd->nama_pengelola = $request->nama_pengelola;
         $skpd->kontak_pengelola = $request->kontak_pengelola;
         $skpd->nama_skpd = $request->nama_skpd;
         $skpd->alamat_skpd = $request->alamat_skpd;
-    
+
         $skpd->save();
         return redirect()->route('tables');
     }
@@ -85,17 +85,17 @@ class PengelolaController extends Controller
         //
         return view('pencatatan.tambah');
     }
-   
-    
+
+
     public function delete($id)
     {
         //
         $skpd = skpdModel::find($id);
         $skpd->delete();
         return redirect()->route('tables');
-        
+
     }
-    
+
 
 
     /**
@@ -108,7 +108,7 @@ class PengelolaController extends Controller
     {
         //
     }
-    
+
 
     /**
      * Display the specified resource.
