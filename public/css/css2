@@ -1,0 +1,33 @@
+
+.bg-peach {
+    background-color: #da3283 !important;
+}
+.sidebar-brand-text {
+    color: #f5f5dc!important;
+}
+.sidebar-divider {
+    border-color: #f5f5dc!important;
+}
+.nav-item .nav-link {
+    color: #f5f5dc!important;
+}
+
+.nav-item .nav-link i {
+    color: #f5f5dc!important;
+}
+.card-header h6 {
+    color: #da3283 !important;
+}
+.btn-primary {
+    background-color: #da3283 !important;
+    border-color: #da3283 !important;
+}
+
+.btn-primary .text-white-50 {
+    color: #ffffff !important; /* Memastikan teks tetap putih */
+}
+
+
+
+
+
